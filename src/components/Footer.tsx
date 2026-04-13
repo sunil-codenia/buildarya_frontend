@@ -30,6 +30,8 @@ export default function Footer() {
             <div className="flex flex-col gap-3">
               <Link href="/homepage" className="text-sm font-medium text-fg-muted hover:text-fg transition-colors">About</Link>
               <Link href="/contact" className="text-sm font-medium text-fg-muted hover:text-fg transition-colors">Contact</Link>
+              <Link href="/privacy-policy" className="text-sm font-medium text-fg-muted hover:text-fg transition-colors">Privacy Policy</Link>
+              <Link href="/terms-and-conditions" className="text-sm font-medium text-fg-muted hover:text-fg transition-colors">Terms & Conditions</Link>
               <a href="mailto:hello@buildarya.in" className="text-sm font-medium text-fg-muted hover:text-fg transition-colors">hello@buildarya.in</a>
             </div>
           </div>
@@ -38,9 +40,19 @@ export default function Footer() {
         {/* Bottom row */}
         <div className="mt-12 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-fg-subtle">© 2026 Buildarya. All rights reserved.</p>
-          <div className="flex items-center gap-6">
-            <a href="#" className="text-xs text-fg-subtle hover:text-fg-muted transition-colors">Privacy Policy</a>
-            <a href="#" className="text-xs text-fg-subtle hover:text-fg-muted transition-colors">Terms of Use</a>
+          <div className="flex items-center gap-3">
+            <Link
+              href="/privacy-policy"
+              className="text-[10px] uppercase tracking-widest font-bold text-fg-muted px-4 py-2 rounded-lg border border-border hover:border-primary/30 hover:bg-primary/5 hover:text-primary transition-all duration-200"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              href="/terms-and-conditions"
+              className="text-[10px] uppercase tracking-widest font-bold text-fg-muted px-4 py-2 rounded-lg border border-border hover:border-primary/30 hover:bg-primary/5 hover:text-primary transition-all duration-200"
+            >
+              Terms of Use
+            </Link>
           </div>
         </div>
       </div>

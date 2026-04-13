@@ -33,11 +33,10 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? 'bg-white/95 backdrop-blur-md shadow-soft border-b border-border'
-            : 'bg-transparent'
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+          ? 'bg-white/95 backdrop-blur-md shadow-soft border-b border-border'
+          : 'bg-transparent'
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-24 md:h-28">
@@ -80,19 +79,16 @@ export default function Header() {
                 aria-label={menuOpen ? 'Close menu' : 'Open menu'}
               >
                 <span
-                  className={`w-5 h-0.5 bg-fg rounded-full transition-all duration-300 ${
-                    menuOpen ? 'rotate-45 translate-y-2' : ''
-                  }`}
+                  className={`w-5 h-0.5 bg-fg rounded-full transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''
+                    }`}
                 />
                 <span
-                  className={`w-5 h-0.5 bg-fg rounded-full transition-all duration-300 ${
-                    menuOpen ? 'opacity-0' : ''
-                  }`}
+                  className={`w-5 h-0.5 bg-fg rounded-full transition-all duration-300 ${menuOpen ? 'opacity-0' : ''
+                    }`}
                 />
                 <span
-                  className={`w-5 h-0.5 bg-fg rounded-full transition-all duration-300 ${
-                    menuOpen ? '-rotate-45 -translate-y-2' : ''
-                  }`}
+                  className={`w-5 h-0.5 bg-fg rounded-full transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''
+                    }`}
                 />
               </button>
             </div>
@@ -116,6 +112,20 @@ export default function Header() {
                 {link?.label}
               </Link>
             ))}
+            <Link
+              href="/privacy-policy"
+              className="py-4 px-4 text-lg font-medium text-fg border-b border-border hover:text-primary transition-colors"
+              onClick={() => setMenuOpen(false)}
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              href="/terms-and-conditions"
+              className="py-4 px-4 text-lg font-medium text-fg border-b border-border hover:text-primary transition-colors"
+              onClick={() => setMenuOpen(false)}
+            >
+              Terms & Conditions
+            </Link>
           </nav>
           <Link
             href="/contact"
